@@ -679,16 +679,6 @@ export function lexicographicCompare(a: string, b: string): number {
     return (a < b) ? -1 : ((a === b) ? 0 : 1);
 }
 
-const collator = new Intl.Collator();
-/**
- * Performant language-sensitive string comparison
- * @param a the first string to compare
- * @param b the second string to compare
- */
-export function compare(a: string, b: string): number {
-    return collator.compare(a, b);
-}
-
 /**
  * This function is similar to Object.assign() but it assigns recursively and
  * allows you to ignore nullish values from the source
